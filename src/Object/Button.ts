@@ -35,13 +35,11 @@ class Button extends Phaser.GameObjects.Container {
     label.setWordWrapWidth(buttonImage.width, true);
 
     // set up the container
-    //Phaser.Display.Align.In.Center(buttonImage, this);
     Phaser.Display.Align.In.Center(label, buttonImage);
     this.setSize(buttonImage.width, buttonImage.height);
     this.add([buttonImage, label]);
 
-
-    // clear up the event
+    // clear up the event before adding new one
     buttonImage.removeAllListeners();
 
     // set up the event
